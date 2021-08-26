@@ -1,0 +1,27 @@
+.promo {
+  width: 100%;
+  min-height: 800px;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
+  grid-gap: 2px;
+  grid-gap: 4px;
+  background-color: #000000;
+}
+
+.promo__card {
+  min-height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.promo__card_main {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.promo__card_top-right {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}

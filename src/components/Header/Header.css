@@ -1,0 +1,15 @@
+.header {
+  min-height: 400px;
+  background-color: transparent;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.header__logo {
+  display: block;
+  background-image: url('../../images/logo.png');
+  background-size: cover;
+  width: 150px;
+  height: 75px;
+}
