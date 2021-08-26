@@ -1,0 +1,42 @@
+.promo-card {
+  min-height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  color: #ffffff;
+}
+
+.promo-card__title {
+  margin: 400px 40px 0 40px;
+  font-size: 70px;
+  line-height: 1.2;
+  text-shadow: 0 0 20px #000000;
+}
+
+.promo-card__text {
+  margin: 20px 40px 0 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px #000000, 0 0 10px #000000;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.promo-card__more-button {
+  margin: 20px 40px 0 40px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 1.2;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px #ffffff solid;
+}
+
+.promo-card__more-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
