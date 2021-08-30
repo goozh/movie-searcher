@@ -9,7 +9,7 @@
   background-color: #000000;
 }
 
-.promo__card {
+/* .promo__card {
   min-height: 100px;
   background-position: center;
   background-size: cover;
@@ -20,8 +20,66 @@
   grid-row-start: 1;
   grid-row-end: 3;
 }
+*/
+
+.promo__card {
+  min-height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.promo__card_main {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 
 .promo__card_top-right {
   grid-column-start: 2;
   grid-column-end: 4;
+}
+
+.promo__card-title_main {
+  margin: 400px 40px 0 40px;
+  font-size: 70px;
+  line-height: 1.2;
+  text-shadow: 0 0 20px #000000;
+}
+
+.promo__card-title_top-right {
+  margin: 260px 30px 0 30px;
+  font-size: 40px;
+  line-height: 1.2;
+  text-shadow: 0 0 20px #000000;
+}
+
+.promo__card-text {
+  margin: 20px 40px 0 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px #000000, 0 0 10px #000000;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.promo__card-more-button {
+  margin: 20px 40px 0 40px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 1.2;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px #ffffff solid;
+}
+
+.promo__card-more-button_top-right {
+  margin: 20px 30px 0 30px;
+}
+
+.promo__card-more-button:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
