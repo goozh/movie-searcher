@@ -25,14 +25,26 @@
 .promo__card {
   min-height: 100px;
   background-position: center;
-  background-size: cover;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   color: #ffffff;
+  transition-property: background-size;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
+}
+
+.promo__card:hover {
+  background-size: auto 105%;
 }
 
 .promo__card_main {
   grid-row-start: 1;
   grid-row-end: 3;
+  background-size: 100% auto;
+}
+
+.promo__card_main:hover {
+  background-size: 105% auto;
 }
 
 .promo__card_top-right {
@@ -52,6 +64,16 @@
   font-size: 40px;
   line-height: 1.2;
   text-shadow: 0 0 20px #000000;
+}
+
+.promo__card-title_small {
+  margin: 0 30px;
+  font-size: 40px;
+  line-height: 1.2;
+  text-shadow: 0 0 20px #000000;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .promo__card-text {

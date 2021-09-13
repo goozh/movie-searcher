@@ -1,6 +1,6 @@
 import poster1 from '../../images/1.jpg';
 import poster2 from '../../images/6.jpg';
-import poster3 from '../../images/11.jpg';
+import poster3 from '../../images/12.jpg';
 import poster4 from '../../images/7.jpg';
 
 function Promo() {
@@ -12,11 +12,15 @@ function Promo() {
         <button className="promo__card-more-button">Подробнее</button>
       </div>
       <div className="promo__card promo__card_top-right" style={{ backgroundImage: `url(${poster2})`}}>
-        <h2 className="promo__card-title promo__card-title_top-right">Главный герой</h2>
+        <h2 className="promo__card-title promo__card-title_top-right">Воспоминания</h2>
         <button className="promo__card-more-button promo__card-more-button_top-right">Подробнее</button>
       </div>
-      <div className="promo__card" style={{ backgroundImage: `url(${poster3})`}}></div>
-      <div className="promo__card" style={{ backgroundImage: `url(${poster4})`}}></div>
+      <div className="promo__card" style={{ backgroundImage: `url(${poster3})`}}>
+        <h2 className="promo__card-title promo__card-title_small">Дом на другой стороне</h2>
+      </div>
+      <div className="promo__card" style={{ backgroundImage: `url(${poster4})`}}>
+        <h2 className="promo__card-title promo__card-title_small">Дюна</h2>
+      </div>
     </section>
   );
 }
