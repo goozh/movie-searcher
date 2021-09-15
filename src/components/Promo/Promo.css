@@ -22,7 +22,13 @@
 }
 */
 
+.promo__content-container {
+  position: absolute;
+  z-index: 1;
+}
+
 .promo__card {
+  position: relative;
   min-height: 100px;
   background-position: center;
   background-size: auto 100%;
@@ -33,8 +39,23 @@
   transition-duration: 0.5s;
 }
 
+.promo__card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0;
+}
+
 .promo__card:hover {
   background-size: auto 105%;
+}
+
+.promo__card:hover::after {
+  opacity: 0.2;
 }
 
 .promo__card_main {
@@ -71,9 +92,10 @@
   font-size: 40px;
   line-height: 1.2;
   text-shadow: 0 0 20px #000000;
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  z-index: 1;
 }
 
 .promo__card-text {
