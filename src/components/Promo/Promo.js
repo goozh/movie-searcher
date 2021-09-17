@@ -2,10 +2,12 @@ import poster1 from '../../images/1.jpg';
 import poster2 from '../../images/6.jpg';
 import poster3 from '../../images/12.jpg';
 import poster4 from '../../images/7.jpg';
+import { NavLink } from 'react-router-dom';
 
 function Promo() {
   return (
     <section className="promo">
+      <NavLink to="/" className="promo__logo"></NavLink>
       <div className="promo__card promo__card_main" style={{ backgroundImage: `url(${poster1})`}}>
         <div className="promo__content-container">
           <h2 className="promo__card-title promo__card-title_main">Главный герой</h2>
