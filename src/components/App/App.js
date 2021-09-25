@@ -2,6 +2,7 @@ import Header from '../Header/Header';
 import Promo from '../Promo/Promo';
 import Highlights from '../Highlights/Highlights';
 import Featured from '../Featured/Featured';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Header isLoggedIn={true} />
         <Highlights />
         <Featured />
+        <Footer />
       </div>
     </div>
   );
