@@ -1,6 +1,7 @@
 import Header from '../Header/Header';
 import Promo from '../Promo/Promo';
 import Highlights from '../Highlights/Highlights';
+import Featured from '../Featured/Featured';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Promo />
         <Header isLoggedIn={true} />
         <Highlights />
+        <Featured />
       </div>
     </div>
   );
