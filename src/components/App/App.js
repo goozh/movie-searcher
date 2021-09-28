@@ -9,12 +9,12 @@ function App() {
   return (
     <div className="root">
       <div className="page">
-        {/* <Promo />
+        <Promo />
         <Header isLoggedIn={true} />
         <Highlights />
-        <Featured /> */}
-        <Header isLoggedIn={true} />
-        <Movie />
+        <Featured />
+        {/* <Header isLoggedIn={true} />
+        <Movie /> */}
         <Footer />
       </div>
     </div>

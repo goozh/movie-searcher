@@ -100,7 +100,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .header__container {
     padding: 0 30px;
   }
