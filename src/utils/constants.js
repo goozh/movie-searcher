@@ -1,0 +1,12 @@
+export const BASE_URL='https://api.movies-explorer.gzzzh.nomoredomains.monster';
+export const IMAGE_URL='https://api.nomoreparties.co';
+export const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
+export const NAME_REGEX = /\S[^a-z][^а-я]/i;
+export const FETCH_ERROR_TEXT = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
+export const SHORT_DURATION = 40;
+export const COUNT_MOVIES_1024 = 12;
+export const COUNT_MOVIES_768 = 8;
+export const COUNT_MOVIES_320 = 5;
+export const MORE_COUNT_MOVIES_1024 = 3;
+export const MORE_COUNT_MOVIES_768 = 2;
+export const MORE_COUNT_MOVIES_320 = 2;

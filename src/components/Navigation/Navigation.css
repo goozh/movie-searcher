@@ -1,0 +1,102 @@
+.navigation {
+  position: fixed;
+  width: 68%;
+  height: 100vh;
+  top: 0;
+  right: -68%;
+  background-color: #202020;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  transition: right 1s ease;
+}
+
+.navigation_opened {
+  display: flex;
+  right: 0;
+}
+
+.navigation_logged-out {
+  justify-content: flex-start;
+}
+
+.navigation__close {
+  width: 31px;
+  height: 31px;
+  background: url(../../images/close_icon.svg) no-repeat;
+  align-self: flex-end;
+  margin: 23px 23px 0 0;
+}
+
+.navigation__nav-bar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 106px 0 0;
+}
+
+.navigation__nav-link {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.navigation__nav-link_selected {
+  text-decoration: underline;
+}
+
+.navigation__account-link-container {
+  margin: auto 0 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__nav-link_account {
+  font-size: 14px;
+  line-height: 1.14;
+  margin: 0;
+}
+
+.navigation__profile-icon {
+  width: 26px;
+  height: 30px;
+  background: url(../../images/account_icon.svg) no-repeat center ;
+  background-color: #313131;
+  border-radius: 4px;
+  margin-left: 17px;
+}
+
+@media screen and (max-width: 450px) {
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation__close {
+    margin: 14px 14px 0 0;
+  }
+
+  .navigation__nav-bar {
+    margin-top: 100px;
+  }
+
+  .navigation__nav-link {
+    margin-bottom: 25px;
+  }
+
+  .navigation__nav-link_account {
+    margin-bottom: 0;
+  }
+
+  .navigation__account-link-container {
+    margin: auto 0 17px;
+  }
+}
