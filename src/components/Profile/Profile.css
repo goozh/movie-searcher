@@ -1,7 +1,7 @@
 .profile {
   min-height: 780px;
   height: 100vh;
-  background-color: #202020;
+  background-color: #252B42;
   display: flex;
 }
 
@@ -39,7 +39,7 @@
   line-height: 13px;
   color: #FFFFFF;
   text-align: right;
-  background-color: #202020;
+  background-color: #252B42;
   border: 0;
   outline: 0;
   display: none;

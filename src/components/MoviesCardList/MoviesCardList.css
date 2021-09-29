@@ -1,7 +1,7 @@
 .movies-card-list {
   padding: 68px 70px 80px;
   box-sizing: border-box;
-  background-color: #202020;
+  background-color: #252B42;
   min-height: calc(100vh - 475px);
 }
 
@@ -25,7 +25,7 @@
 .movies-card-list__more-button {
   width: 320px;
   height: 36px;
-  background-color: #202020;
+  background-color: #3f4046;
   border-radius: 3px;
   outline: 1px solid #424242;
   border: 0;

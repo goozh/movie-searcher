@@ -154,9 +154,7 @@ function App() {
           <CurrentUserContext.Provider value={currentUser}>
             <Switch>
               <Route exact path="/">
-                {/* <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} /> */}
-                <Main />
-                {/* <Footer /> */}
+                <Main isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
               </Route>
               <ProtectedRoute path="/movies" isLoggedIn={isLoggedIn} loginCheck={loginCheck}>
                 <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />

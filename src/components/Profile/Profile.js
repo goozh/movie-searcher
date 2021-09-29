@@ -44,7 +44,7 @@ function Profile({ setCurrentUser, handleProfileFormSubmit }) {
   return (
     <section className="profile">
       <form className="profile__form-container">
-        <h2 className="profile__title">Привет, Виталий!</h2>
+        <h2 className="profile__title">{`Привет, ${currentUser.name}!`}</h2>
         <label className="profile__input-label">
           Имя
           <label

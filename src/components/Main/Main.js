@@ -4,15 +4,13 @@ import Highlights from '../Highlights/Highlights';
 import Featured from '../Featured/Featured';
 import Footer from '../Footer/Footer';
 
-function Main() {
+function Main({ isLoggedIn, handleMenuIconClick }) {
   return (
     <>
       <Promo />
-      <Header />
+      <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
       <Highlights />
       <Featured />
-      {/* <Header isLoggedIn={true} />
-      <Movie /> */}
       <Footer />
     </>
   );

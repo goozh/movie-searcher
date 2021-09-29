@@ -14,7 +14,7 @@ function Login({ handleLoginFormSubmit }) {
     <section className="login">
       <form className="login__form-container">
         <NavLink to="/" className="login__logo"></NavLink>
-        <h2 className="login__title">Рады видеть!</h2>
+        <h2 className="login__title">Рады видеть вас снова!</h2>
         <label className="login__input-label">
           E-mail
           <input
