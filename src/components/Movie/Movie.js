@@ -30,8 +30,6 @@ function Movie() {
         <h3 className="movie__trailer-title">Трейлер фильма:</h3>
         <iframe
           className="movie__trailer-iframe"
-          width="560"
-          height="315"
           src={MOVIES_DATA[id].trailer}
           title="YouTube video player"
           frameborder="0"
