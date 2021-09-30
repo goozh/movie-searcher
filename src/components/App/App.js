@@ -13,6 +13,7 @@ import Profile from '../Profile/Profile';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Navigation from '../Navigation/Navigation';
 import MessagePopup from '../MessagePopup/MessagePopup';
+import Movie from '../Movie/Movie';
 import { MessagePopupContext } from '../../contexts/MessagePopupContext';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { mainApi } from '../../utils/MainApi';
@@ -156,26 +157,31 @@ function App() {
               <Route exact path="/">
                 <Main isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
               </Route>
-              <ProtectedRoute path="/movies" isLoggedIn={isLoggedIn} loginCheck={loginCheck}>
+              <Route exact path="/movie/:id">
+                <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
+                <Movie isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
+                <Footer />
+              </Route>
+              <ProtectedRoute exact path="/movies" isLoggedIn={isLoggedIn} loginCheck={loginCheck}>
                 <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
                 <Movies savedMovies={savedMovies} setSavedMovies={setSavedMovies} />
                 <Footer />
               </ProtectedRoute>
-              <ProtectedRoute path="/saved-movies" isLoggedIn={isLoggedIn}>
+              <ProtectedRoute exact path="/saved-movies" isLoggedIn={isLoggedIn}>
                 <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
                 <SavedMovies savedMovies={savedMovies} setSavedMovies={setSavedMovies} />
                 <Footer />
               </ProtectedRoute>
-              <ProtectedRoute path="/profile" isLoggedIn={isLoggedIn}>
+              <ProtectedRoute exact path="/profile" isLoggedIn={isLoggedIn}>
                 <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
                 <Profile setCurrentUser={setCurrentUser} handleProfileFormSubmit={handleProfileFormSubmit} />
               </ProtectedRoute>
-              <Route path="/signin">
+              <Route exact path="/signin">
                 {!isLoggedIn ?
                   <Login handleLoginFormSubmit={handleLoginFormSubmit} />
                   : <Redirect to="/movies" />}
               </Route>
-              <Route path="/signup">
+              <Route exact path="/signup">
                 {!isLoggedIn ?
                   <Register handleRegisterFormSubmit={handleRegisterFormSubmit} />
                   : <Redirect to="/movies" />}

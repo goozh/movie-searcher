@@ -1,28 +1,27 @@
 import poster from "../../images/hero.jpg";
+import { useParams } from 'react-router-dom';
+import { MOVIES_DATA } from '../../utils/constants';
 
 function Movie() {
+  let { id } = useParams();
+
   return (
     <section className="movie">
       <div className="movie__container">
-        <img className="movie__poster" src={poster} alt="Постер фильма"></img>
+        <img className="movie__poster" src={MOVIES_DATA[id].poster_min} alt="Постер фильма"></img>
         <div className="movie__info-container">
-          <h2 className="movie__title">Главный герой (2021)</h2>
+          <h2 className="movie__title">{MOVIES_DATA[id].title}</h2>
           <p className="movie__synopsis">
-            У сотрудника крупного банка всё идёт по накатанной, пока однажды он
-            не выясняет, что окружающий его мир — это часть огромной видеоигры,
-            а сам он в ней — всего лишь второстепенный персонаж. Хватит ли у
-            него духу переписать свой код, обратить на себя внимание прекрасной
-            девушки и, наконец, спасти мир? Одним словом, получится ли из него
-            главный герой?
+            {MOVIES_DATA[id].sinopsys}
           </p>
           <ul className="movie__specification-list">
             <li className="movie__specification-item">
               <p className="movie__specification-title">Продолжительность:</p>
-              <p className="movie__specification">115 мин. / 01:55</p>
+              <p className="movie__specification">{MOVIES_DATA[id].duration}</p>
             </li>
             <li className="movie__specification-item">
               <p className="movie__specification-title">Режиссер</p>
-              <p className="movie__specification">Шон Леви</p>
+              <p className="movie__specification">{MOVIES_DATA[id].director}</p>
             </li>
           </ul>
         </div>
@@ -33,7 +32,7 @@ function Movie() {
           className="movie__trailer-iframe"
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/wnS4A5-vtFA"
+          src={MOVIES_DATA[id].trailer}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
