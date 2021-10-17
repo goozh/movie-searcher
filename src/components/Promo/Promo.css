@@ -43,11 +43,8 @@
 .promo__card {
   position: relative;
   min-height: 100px;
-  background-position: center;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
   color: #ffffff;
-  transition: background-size 0.5s ease-in 0s;
+  overflow: hidden;
 }
 
 .promo__card::after {
@@ -73,11 +70,17 @@
 .promo__card_main {
   grid-row-start: 1;
   grid-row-end: 3;
-  background-size: 100% auto;
 }
 
-.promo__card_main:hover {
-  background-size: 105% auto;
+.promo__card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in 0s;
+}
+
+.promo__card:hover .promo__card-image {
+  transform: scale(1.1);
 }
 
 .promo__card_top-right {
