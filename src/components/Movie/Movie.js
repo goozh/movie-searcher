@@ -1,4 +1,3 @@
-import poster from "../../images/hero.jpg";
 import { useParams } from 'react-router-dom';
 import { MOVIES_DATA } from '../../utils/constants';
 
