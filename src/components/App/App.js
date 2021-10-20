@@ -19,7 +19,8 @@ import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { mainApi } from '../../utils/MainApi';
 import Logout from '../Logout/Logout';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import { FETCH_ERROR_TEXT } from '../../utils/constants';
+import { FETCH_ERROR_TEXT, MOVIES_DATA } from '../../utils/constants';
+import { shuffleArray } from '../../utils/shuffleArray';
 
 function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -44,6 +45,8 @@ function App() {
       jwt = localStorage.getItem('jwt');
     }
     loginCheck(jwt);
+
+    shuffleArray(MOVIES_DATA)
   }, [])
 
   useEffect(() => {
@@ -159,7 +162,7 @@ function App() {
               </Route>
               <Route exact path="/movie/:id">
                 <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
-                <Movie isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
+                <Movie moviesData={MOVIES_DATA} />
                 <Footer />
               </Route>
               <ProtectedRoute exact path="/movies" isLoggedIn={isLoggedIn} loginCheck={loginCheck}>

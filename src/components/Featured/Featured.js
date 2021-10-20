@@ -1,4 +1,3 @@
-import poster from '../../images/13.jpg';
 import { NavLink } from 'react-router-dom';
 import { MOVIES_DATA } from '../../utils/constants';
 
@@ -8,7 +7,7 @@ function Featured() {
       <div className="featured__content-container">
         <h2 className="featured__title">{MOVIES_DATA[8].title}</h2>
         <p className="featured__text">{MOVIES_DATA[8].sinopsys}</p>
-        <NavLink to={`/movie/${MOVIES_DATA[8].id}`} className="featured__more-button">Подробнее</NavLink>
+        <NavLink to={`/movie/8`} className="featured__more-button">Подробнее</NavLink>
       </div>
     </section>
   )
