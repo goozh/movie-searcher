@@ -21,13 +21,17 @@
   list-style: none;
 }
 
-.highlights__card {
+.highlights__list-item {
   margin: 0 30px 0 0;
   padding: 0;
+}
+
+.highlights__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 255px;
+  max-width: 250px;
+  text-decoration: none;
 }
 
 .highlights__card:last-of-type {
@@ -39,6 +43,12 @@
   line-height: 1.2;
   color: #ffffff;
   margin: 10px 0 0;
+}
+
+@media screen and (max-width: 1270px) {
+  .highlights__card {
+    max-width: 160px;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -54,6 +64,7 @@
 
   .highlights__card {
     margin: 0 0 40px 0;
+    max-width: 250px;
   }
 
   .highlights__card-title {
