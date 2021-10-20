@@ -25,9 +25,15 @@
 .promo__content-container {
   position: absolute;
   z-index: 1;
-  left: 30px;
-  right: 30px;
+  left: 50px;
+  right: 50px;
   bottom: 30px;
+}
+
+.promo__content-container_main {
+  left: 40px;
+  right: 40px;
+  bottom: 50px;
 }
 
 .promo__card {

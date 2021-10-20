@@ -10,7 +10,7 @@ function Promo() {
     <section className="promo">
       <NavLink to="/" className="promo__logo"></NavLink>
       <div className="promo__card promo__card_main">
-        <div className="promo__content-container">
+        <div className="promo__content-container promo__content-container_main">
           <h2 className="promo__card-title promo__card-title_main">{MOVIES_DATA[0].title}</h2>
           <p className="promo__card-text">{MOVIES_DATA[0].sinopsys}</p>
           <NavLink to={`/movie/${MOVIES_DATA[0].id}`} className="promo__card-more-button">Подробнее</NavLink>
