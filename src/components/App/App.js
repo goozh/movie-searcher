@@ -14,6 +14,7 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Navigation from '../Navigation/Navigation';
 import MessagePopup from '../MessagePopup/MessagePopup';
 import Movie from '../Movie/Movie';
+import LoadPage from '../LoadPage/LoadPage';
 import { MessagePopupContext } from '../../contexts/MessagePopupContext';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { mainApi } from '../../utils/MainApi';
@@ -25,6 +26,7 @@ import { shuffleArray } from '../../utils/shuffleArray';
 function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isShuffled, setIsShuffled] = useState(false);
   const [currentUser, setCurrentUser] = useState({ name: '', email: '', id: null});
   const [savedMovies, setSavedMovies] = useState([]);
   const location = useLocation();
@@ -45,8 +47,11 @@ function App() {
       jwt = localStorage.getItem('jwt');
     }
     loginCheck(jwt);
+  }, [])
 
-    shuffleArray(MOVIES_DATA)
+  useEffect(() => {
+    shuffleArray(MOVIES_DATA);
+    setIsShuffled(true);
   }, [])
 
   useEffect(() => {
@@ -158,7 +163,9 @@ function App() {
           <CurrentUserContext.Provider value={currentUser}>
             <Switch>
               <Route exact path="/">
-                <Main isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
+                {isShuffled ?
+                  <Main isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
+                  : <LoadPage />}
               </Route>
               <Route exact path="/movie/:id">
                 <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
