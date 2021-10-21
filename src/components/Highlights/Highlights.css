@@ -39,7 +39,7 @@
 }
 
 .highlights__card:hover {
-  opacity: 80%;
+  opacity: .8;
 }
 
 .highlights__card-image {
