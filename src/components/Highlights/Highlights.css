@@ -38,6 +38,10 @@
   margin: 0
 }
 
+.highlights__card:hover {
+  opacity: 80%;
+}
+
 .highlights__card-image {
   object-fit: cover;
   height: 370px;
