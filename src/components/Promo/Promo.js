@@ -12,7 +12,10 @@ function Promo() {
       <div className="promo__card promo__card_main">
         <div className="promo__content-container promo__content-container_main">
           <h2 className="promo__card-title promo__card-title_main">{MOVIES_DATA[0].title}</h2>
-          <p className="promo__card-text">{MOVIES_DATA[0].sinopsys}</p>
+          <div className="promo__card-container">
+            <p className="promo__card-text">{MOVIES_DATA[0].sinopsys}</p>
+            <p className="promo__card-text-gradient">{MOVIES_DATA[0].sinopsys}</p>
+          </div>
           <NavLink to={`/movie/0`} className="promo__card-more-button">Подробнее</NavLink>
         </div>
         <img className="promo__card-image" src={MOVIES_DATA[0].poster} alt={MOVIES_DATA[0].title}></img>

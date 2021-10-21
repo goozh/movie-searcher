@@ -1,13 +1,12 @@
 .promo {
   width: 100%;
-  max-height: 800px;
+  height: 800px;
   display: grid;
   grid-template-columns: 4fr 1fr 1fr;
   grid-template-rows: 1.5fr 1fr;
   grid-gap: 2px;
   grid-gap: 4px;
   background-color: #000000;
-  max-width: 100%;
 }
 
 .promo__logo {
@@ -111,20 +110,40 @@
   font-weight: 600;
 }
 
+.promo__card-container {
+  position: relative;
+}
+
 .promo__card-text {
   margin: 20px 0 0;
   font-size: 20px;
   line-height: 1.2;
   text-shadow: 2px 2px 4px #000000, 0 0 10px #000000;
-  max-height: 400px;
+  max-height: 240px;
   overflow: hidden;
+}
+
+.promo__card-text-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  max-height: 283px;
+  overflow: hidden;
+  background-image: linear-gradient(#ffffff, 95%, transparent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .promo__card-more-button {
   display: block;
   text-align: center;
   text-decoration: none;
-  margin: 20px 0 0;
+  margin: 60px 0 0;
   width: 150px;
   height: 50px;
   font-size: 20px;
@@ -203,6 +222,10 @@
   }
 
   .promo__card-text {
+    display: none;
+  }
+
+  .promo__card-text-gradient {
     display: none;
   }
 }
