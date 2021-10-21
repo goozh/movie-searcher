@@ -40,6 +40,9 @@
   min-height: 100px;
   color: #ffffff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .promo__card::after {
@@ -93,6 +96,7 @@
   font-size: 40px;
   line-height: 1.2;
   text-shadow: 0 0 20px #000000;
+  overflow-wrap: anywhere;
 }
 
 .promo__card-title_small {
@@ -101,13 +105,13 @@
   line-height: 1.2;
   text-shadow: 0 0 20px #000000;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
+  overflow-wrap: anywhere;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .promo__card-container {

@@ -46,3 +46,18 @@
   color: #000000;
   background-color: #ffffff;
 }
+
+@media screen and (max-width: 860px) {
+  .featured__content-container {
+    padding: 100px 50px 0;
+  }
+
+  .featured__title {
+    font-size: 40px;
+  }
+
+  .featured__text {
+    max-height: 623px;
+    overflow: hidden;
+  }
+}

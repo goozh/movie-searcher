@@ -30,12 +30,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 250px;
+  /* max-width: 250px; */
   text-decoration: none;
 }
 
 .highlights__card:last-of-type {
   margin: 0
+}
+
+.highlights__card-image {
+  object-fit: cover;
+  height: 370px;
 }
 
 .highlights__card-title {
@@ -46,8 +51,13 @@
 }
 
 @media screen and (max-width: 1270px) {
-  .highlights__card {
-    max-width: 160px;
+  .highlights__card-image {
+    width: 160px;
+    height: 230px;
+  }
+
+  .highlights__card-title {
+    width: 160px;
   }
 }
 
@@ -62,12 +72,17 @@
     align-items: center;
   }
 
-  .highlights__card {
+  .highlights__list-item {
     margin: 0 0 40px 0;
-    max-width: 250px;
+  }
+
+  .highlights__card-image {
+    height: 370px;
+    width: 260px;
   }
 
   .highlights__card-title {
     text-align: center;
+    width: 100%;
   }
 }
