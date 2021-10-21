@@ -1,8 +1,30 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Header({ isLoggedIn, handleMenuIconClick }) {
+
+  let scrollPrev = 0;
+  const [headerStickedClass, setHeaderStickedClass] = useState('');
+
+  function handleScroll() {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 800) {
+      setHeaderStickedClass(' header_sticked');
+    } else {
+      setHeaderStickedClass('');
+    }
+    scrollPrev = scrolled;
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={'header' + (isLoggedIn ? ' header_logged-in' : '')}>
+    <header className={'header' + (isLoggedIn ? ' header_logged-in' : '') + (headerStickedClass)}>
       <div className="header__container">
         <NavLink to="/" className="header__logo"></NavLink>
         <div className="header__right-container">

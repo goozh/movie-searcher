@@ -5,6 +5,10 @@
   margin: auto;
 }
 
+.header_sticked + .highlights {
+  padding-top: 154px;
+}
+
 .highlights__title {
   margin: 0;
   font-size: 40px;

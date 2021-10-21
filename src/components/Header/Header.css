@@ -5,6 +5,12 @@
   background-color: #1e2235;
 }
 
+.header_sticked {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
