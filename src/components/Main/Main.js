@@ -8,7 +8,7 @@ function Main({ isLoggedIn, handleMenuIconClick }) {
   return (
     <>
       <Promo />
-      <Header isLoggedIn={isLoggedIn} handleMenuIconClick={handleMenuIconClick} />
+      <Header isLoggedIn={isLoggedIn} isSticky={true} handleMenuIconClick={handleMenuIconClick} />
       <Highlights />
       <Featured />
       <Footer />

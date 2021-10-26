@@ -8,6 +8,8 @@
 .register__form-container {
   margin: 0 auto;
   width: 396px;
+  display: flex;
+  flex-direction: column;
 }
 
 .register__logo {
