@@ -1,6 +1,6 @@
 .register {
   min-height: 700px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #252B42;
   display: flex;
 }
@@ -121,7 +121,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .register__form-container {
     width: 260px;
   }

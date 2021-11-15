@@ -8,6 +8,6 @@
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   background-color: #252B42;
-  min-width: 480px;
+  min-width: 320px;
   z-index: 0;
 }

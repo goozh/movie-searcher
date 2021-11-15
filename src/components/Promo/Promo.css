@@ -233,3 +233,24 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .promo__content-container {
+    left: 20px;
+    right: 20px;
+    bottom: 50px;
+  }
+
+  .promo__card-title_main {
+    font-size: 35px;
+  }
+
+  .promo__card-title_top-right {
+    font-size: 35px;
+  }
+
+  .promo__card-more-button {
+    margin-top: 30px;
+  }
+
+}
