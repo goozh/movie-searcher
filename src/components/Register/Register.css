@@ -3,6 +3,7 @@
   min-height: 100vh;
   background-color: #252B42;
   display: flex;
+  align-items: center;
 }
 
 .register__form-container {
@@ -13,7 +14,7 @@
 }
 
 .register__logo {
-  margin: 70px auto;
+  margin: 0 auto;
   display: block;
   background-image: url('../../images/logo.png');
   background-size: cover;
@@ -74,7 +75,7 @@
   font-size: 14px;
   line-height: 1.21;
   color: #FFFFFF;
-  margin-top: 134px;
+  margin-top: 60px;
   transition: opacity 0.3s ease;
 }
 
@@ -115,30 +116,19 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 780px) {
-  .register__logo {
-    margin-top: 230px;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .register__form-container {
     width: 260px;
   }
 
-  .register__logo {
-    margin: 55px auto 0;
-  }
-
   .register__title {
-    margin: 52px 0 74px;
     text-align: center;
   }
 
   .register__submit-button {
     font-size: 12px;
     line-height: 1.25;
-    margin-top: 224px;
+    margin-top: 35px;
   }
 
   .register__text {
