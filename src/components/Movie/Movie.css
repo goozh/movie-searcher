@@ -119,12 +119,20 @@
   }
 
   .movie__poster {
-  width: 320px;
-  height: 480px;
-}
+    width: 320px;
+    height: 480px;
+  }
 
   .movie__synopsis {
     line-height: 1.5;
+  }
+
+  .movie__specification-item {
+    flex-direction: column;
+  }
+
+  .movie__specification {
+    margin: 5px 0 0 0;
   }
 
   .movie__trailer-iframe {

@@ -18,7 +18,7 @@ function Movie({ moviesData }) {
               <p className="movie__specification">{moviesData[id].duration}</p>
             </li>
             <li className="movie__specification-item">
-              <p className="movie__specification-title">Режиссер</p>
+              <p className="movie__specification-title">Режиссер:</p>
               <p className="movie__specification">{moviesData[id].director}</p>
             </li>
           </ul>
