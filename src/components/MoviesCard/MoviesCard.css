@@ -41,7 +41,7 @@
 .movies-card__image {
   width: 100%;
   object-position: center;
-  object-fit: contain;
+  object-fit: cover;
   height: 200px;
 }
 
@@ -51,7 +51,7 @@
   background-color: #3f4046;
   border-radius: 30px;
   border: 0;
-  margin: 18px auto 0;
+  margin: 18px auto 10px;
   transition: opacity 0.3s ease;
   font-weight: 500;
   font-size: 12px;
@@ -98,6 +98,6 @@
   }
 
   .movies-card__save-button {
-    margin: 14px auto 0;
+    margin: 10px auto 10px;
   }
 }
